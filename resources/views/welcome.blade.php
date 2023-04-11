@@ -3,7 +3,13 @@
 @section('content')
 
 <div>
-    Questo è il contenuto
+    <ul>
+        @forelse ($comics as $comic)
+            <li>{{ $comic['title'] }}</li>
+        @empty
+
+        @endforelse
+    </ul>
 </div>
 
 @endsection
